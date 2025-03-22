@@ -3,34 +3,125 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Using Bootstrap Stylesheet -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Website Template</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      /* Style the header */
+      .header {
+        background-color: #3333;
+        padding: 20px;
+        text-align: center;
+        font-family: Times New Roman;
+      }
+
+      /* Style the top navigation bar */
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+        font-family: Times New Roman;
+      }
+
+      /* Style the topnav links */
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: Times New Roman;
+      }
+
+      /* Change color on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        font-family: Times New Roman;
+      }
+
+      /* Create three equal columns that float next to each other */
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 15px;
+        font-family: Times New Roman;
+      }
+
+      /* Clear floats after the columns */
+      .row::after {
+        content: "";
+        display: table;
+        clear: both;
+        font-family: Times New Roman;
+      }
+
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          font-family: Times New Roman;
+        }
+      }
+    </style>
   </head>
 
-  <!-- body content is what is displayed in browser -->
   <body>
     <!-- Placeholder for navigation that is in navbar.html-->
     <div id="nav-placeholder"></div>
-    
-    <h1>
-      Internet Information
-    </h1>
 
-    <!--  script code to add navbar -->
+    <div class="header">
+      <h1>The Internet.</h1>
+      <p>How does the Internet work? What are some daily practices? and how can we implement them into our daily lives?</p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <h2>✱What is Encoding?</h2>
+        <p>Encoding is the process which creates a secure password for your data, whether that be a photo, text, or payment information. You can be sure to thank the encoding process that your phone number isn't leaked, and your credit cards aren't maxed out! Different formats like ASCII or UTF-8 exist for readability across different systems. Data encoding, such as Base64 or URL encoding, transforms binary or special characters into text suitable for transmission.</p>
+      </div>
+
+      <div class="column">
+        <h2>✱What is Encryption?</h2>
+        <p>Encryption is the process of converting data into a coded format to prevent unauthorized access. It uses algorithms and keys to transform readable data (plaintext) into an unreadable form (ciphertext). Only individuals or systems with the correct decryption key can convert the encrypted data back to its original format.</p>
+      </div>
+
+      <div class="column">
+        <h2>✱How does Data Travel?</h2>
+        <p>Data travels across networks by first being broken into small packets, each containing a portion of the original information and metadata like sender and receiver addresses. These packets are transmitted through various network paths using routers and switches, following protocols like TCP/IP to ensure proper routing and error handling. If the data is encrypted, it remains unreadable during transmission and is only decrypted at the destination using the correct key.</p>
+      </div>
+
+      <div class="column">
+        <h2>✱Secure Communication practices.</h2>
+        <p>Secure communication practices are crucial for protecting sensitive data from unauthorized access and attacks. Key practices include encrypting data both in transit and at rest to prevent eavesdropping, using multi-factor authentication to verify user identities, and implementing strong, unique passwords stored securely. Regular software updates help protect against vulnerabilities, while using secure networks, such as encrypted Wi-Fi and VPNs, safeguards data on public connections.</p>
+      </div>
+
+      <div class="column">
+        <h2>✱HTTPS and Security.</h2>
+        <p>HTTPS (Hypertext Transfer Protocol Secure) is a protocol used to secure communication over the internet by encrypting the data exchanged between a user's browser and a website. It uses SSL/TLS (Secure Sockets Layer/Transport Layer Security) protocols to create an encrypted connection, preventing third parties from intercepting or tampering with the data during transmission. HTTPS ensures that the data sent, such as passwords, payment information, or personal details, is encrypted and secure from potential hackers.</p>
+      </div>
+
+      <div class="column">
+        <h2>✱Best Practices.</h2>
+        <p>When surfing the web, it's essential to prioritize security and privacy by following best practices. Always look for HTTPS in the URL to ensure encrypted communication, and enable two-factor authentication for accounts that support it. Use strong, unique passwords for each site, and consider a password manager to securely store them. Avoid using public Wi-Fi for sensitive transactions unless you're using a VPN, and stay vigilant against phishing scams by verifying the legitimacy of emails and links. Regularly update your browser and software to patch security vulnerabilities, and consider using ad blockers and privacy tools to minimize tracking.</p>
+      </div>
+
+      <a href="https://consumer.ftc.gov/identity-theft-and-online-security/online-privacy-and-security">Internet Security In Depth</a>
+    </div>
+
+    <!-- Script to load the navigation menu -->
     <script>
       // Load the navigation menu into the placeholder
       $("#nav-placeholder").load("navbar.html");
